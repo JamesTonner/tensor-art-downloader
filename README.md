@@ -1,12 +1,12 @@
-# Python script to download models from CivitAI using an API key
+# Python script to download models from Tensor.Art using an API key
 
 ## Getting Started
 
-This script requires a [CivitAI](https://civitai.com/user/account)
+This script requires a [Tensor.Art](https://tensor.art/user/account)
 API key.  You can create the API key as follows:
 
-1. Log into [CivitAI](https://civitai.com).
-2. Go to the [Manage Account](https://civitai.com/user/account) page.
+1. Log into [Tensor.Art](https://tensor.art).
+2. Go to the [Manage Account](https://tensor.art/user/account) page.
 3. Scroll down to the `API Keys` section, close to the bottom of the page.
 4. Click the `+ Add API key` button to create a new API key.
 5. Give the API key a name and click the `Save` button.
@@ -15,7 +15,7 @@ API key.  You can create the API key as follows:
 ## Installation
 
 ```bash
-wget https://raw.githubusercontent.com/ashleykleynhans/civitai-downloader/main/download.py
+wget https://raw.githubusercontent.com/JamesTonner/tensor-art-downloader/main/download.py
 mv download.py /usr/local/bin/download-model
 chmod +x /usr/local/bin/download-model
 ```
@@ -27,7 +27,7 @@ chmod +x /usr/local/bin/download-model
 
 > [!IMPORTANT]
 > It is important to ensure that you use the **DOWNLOAD** link
-> and not the link to the model page in CivitAI.
+> and not the link to the model page in Tensor.Art.
 
 ## Usage
 
@@ -38,18 +38,18 @@ download-model [URL] [DESTINATION]
 To download to the current directory:
 
 ```bash
-download-model https://civitai.com/api/download/models/46846 .
+download-model https://tensor.art/api/download/models/46846 .
 ```
 
 To download to a different directory:
 
 ```bash
-download-model https://civitai.com/api/download/models/46846 /workspace/stable-diffusion-webui/models/Stable-diffusion
+download-model https://tensor.art/api/download/models/46846 /workspace/stable-diffusion-webui/models/Stable-diffusion
 ```
 
 ## Community and Contributing
 
-Pull requests and issues on [GitHub](https://github.com/ashleykleynhans/civitai-downloader)
+Pull requests and issues on [GitHub](https://github.com/JamesTonner/tensor-art-downloader)
 are welcome. Bug fixes and new features are encouraged.
 
 ## Appreciate my work?

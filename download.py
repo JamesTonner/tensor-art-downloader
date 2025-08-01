@@ -9,19 +9,19 @@ from urllib.parse import urlparse, parse_qs, unquote
 
 
 CHUNK_SIZE = 1638400
-TOKEN_FILE = Path.home() / '.civitai' / 'config'
+TOKEN_FILE = Path.home() / '.tensor-art' / 'config'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 
 
 def get_args():
     parser = argparse.ArgumentParser(
-        description='CivitAI Downloader',
+        description='Tensor.Art Downloader',
     )
 
     parser.add_argument(
         'url',
         type=str,
-        help='CivitAI Download URL, eg: https://civitai.com/api/download/models/46846'
+        help='Tensor.Art Download URL, eg: https://tensor.art/api/download/models/46846'
     )
 
     parser.add_argument(
@@ -49,8 +49,8 @@ def store_token(token: str):
         file.write(token)
 
 
-def prompt_for_civitai_token():
-    token = input('Please enter your CivitAI API token: ')
+def prompt_for_tensor_art_token():
+    token = input('Please enter your Tensor.Art API token: ')
     store_token(token)
     return token
 
@@ -156,7 +156,7 @@ def main():
     token = get_token()
 
     if not token:
-        token = prompt_for_civitai_token()
+        token = prompt_for_tensor_art_token()
 
     try:
         download_file(args.url, args.output_path, token)
